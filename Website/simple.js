@@ -22,6 +22,13 @@ function showNewFar(){
   alert(dofar);
 }
 
+
+function cel_100(){
+
+  var celdo100 = doCelsius(100);
+  alert(celdo100);
+}
+
 function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World!";
 }
