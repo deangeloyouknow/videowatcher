@@ -7,18 +7,17 @@
   border-style: groove;
   border-color: powderblue;
   border-width: 30px;
+  text-align: center;
 }
 
-.button{
+.button {
   padding: 15px 10px;
   font-size: 16px;
   background-color: #ffff4d;
 }
 
-
-.button1{
+.button1 {
   padding: 15px 10px;
   font-size: 16px;
   background-color: #ccf2ff;
-  
 }

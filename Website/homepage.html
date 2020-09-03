@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<link rel="stylesheet" type="text/css" href="format.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="format.css" media="screen" />
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+
+
 
 <!--
 <script type="text/javascript" src="jquery-3.3.1.js"></script>
 -->
+<!--
+Atom will crash if you have just a video in a the folder, the video needs to be within a folder itself
+-->
+
+
+
+<link rel="stylesheet" href="videojs-seek-buttons.css">
+<script src="video.min.js"></script>
+<script src="videojs-seek-buttons.min.js"></script>
+
 
 <script src="simple.js"> </script> <!-- This does work -->
 
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
 
-    <div class="font">
-      <h1>Hello</h1>
-    </div>
+<body>
 
-    <div class="groove">
-      <h1>Hesci</h1>
-    </div>
+  <div class="font">
+    <h1>Welcome to Let's Show</h1>
+  </div>
 
-<!--
+  <div class="groove">
+    <h1>Hesci</h1>
+  </div>
+
+  <!--
     <script>
     function myFunction() {
       document.getElementById("demo").innerHTML = "Hello World!";
@@ -34,16 +51,43 @@
     <button type="button" name="button" onclick="show()"> This will be an alert </button>
   </div>
 
-    <div class="button">
-      <button type="button" name="button" onclick="showNewFar()"> This does celius at 0 </button>
-    </div>
+  <div class="button">
+    <button type="button" name="button" onclick="showNewFar()"> This does celius at 0 </button>
+  </div>
 
-<div class="button">
-  <button type="button" name="button" onclick="cel_100()">This will do celsius at 100</button>
+  <div class="button">
+    <button type="button" name="button" onclick="cel_100()">This will do celsius at 100</button>
 
-</div>
+  </div>
+
+  <!--
+We will place a video aquÍ
+-->
+  <div>
+    <video id="proton" class="video-js vjs-big-play-centered" data-setup='{"controls":true}' width="980" height="600">
+      <source src="Videos\Proton_video.mp4" type="video/mp4">
+
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a
+        web browser that
+        <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+    <!--
+    This scrpit needs to be below the video inorder for the seek buttons to work.
+    -->
+    <script>
+      var player = videojs('proton');
+
+      player.seekButtons({
+        forward: 30,
+        back: 10
+      });
+      </script>
+  </div>
 
 
+  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+</body>
 
-  </body>
 </html>
